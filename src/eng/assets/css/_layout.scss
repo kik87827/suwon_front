@@ -1,1 +1,144 @@
 /* layout */
+
+.header_wrap{}
+.header_container{}
+.header_toplogo{}
+.header_toplogo_item{}
+.pc_nav_list_wrap{}
+.pc_nav_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.pc_one_item{}
+.pc_two_list_wrap{}
+.pc_two_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.header_util_list_wrap{
+    &:before,
+    &:after{}
+    &:before{}
+    &:after{}
+}
+.header_util_list{
+    > li{
+        &:last-of-type{
+            &:after{}
+        }
+        &:after{}
+    }
+}
+.header_util_item{
+    &.active{}
+}
+
+.btn_mobile_total{
+    .btn_mobile_total_inner{
+        &:before,
+        &:after{}
+        &:before{}
+        &:after{}
+    }
+}
+
+.mobile_nav_wrap{
+    .btn_mobile_total{
+        .btn_mobile_total_inner{
+            &:before,
+            &:after{}
+            &:before{}
+            &:after{}
+        }
+    }
+}
+.mobile_nav_top_row{
+
+}
+.mobile_nav_toplogo{
+
+}
+.mobile_nav_content_row{
+
+}
+.mobile_nav_list_wrap{
+
+}
+.mobile_nav_list{
+    > li{
+        &:last-of-type{
+        }
+    }
+}
+.mb_one_item{
+    &:after{}
+    &.active{
+        &:after{}
+    }
+}
+.mb_one_text{}
+.mb_two_list_wrap{
+    &.active{
+        .mb_two_list{
+
+        }
+    }
+    &.motion{
+        .mb_two_list{
+
+        }
+    }
+}
+.mb_two_list{
+    > li{
+        &:last-of-type{
+        }
+    }
+}
+.mb_two_item{
+    &:hover{}
+}
+
+
+.page_control_layer{}
+.page_control_item{}
+.btn_page_control{}
+
+.footer_wrap{
+
+}
+.footer_else_wrap{
+
+}
+.footer_else_container{
+
+}
+.footer_logo_list{
+    > li{
+        &:last-of-type{
+        }
+    }
+}
+.footer_logo{
+    &.logo_partner01{}
+    &.logo_partner02{}
+    &.logo_partner03{}
+}
+
+.footer_primary_wrap{}
+.footer_primary_container{}
+.footer_address_wrap{}
+.footer_address_item{
+    &:after{
+
+    }
+    &:last-of-type{
+        &:after{}
+    }
+}
+.footer_address_key{}
+.footer_address_value{}
+.mobile_address_hr{}
+.footer_copy{}
