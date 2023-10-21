@@ -58,7 +58,64 @@ window.addEventListener("DOMContentLoaded", () => {
    * 레이아웃
    */
   function layoutFunc() {
-   
+    function pcHeader(){
+      //const pc_nav_list = document.querySelector(".pc_nav_list");
+      const header_wrap = document.querySelector(".header_wrap");
+      const pc_nav_li = document.querySelectorAll(".pc_nav_list > li");
+      if(!!header_wrap){
+        header_wrap.addEventListener("mouseenter",(e)=>{
+          const thisItem = e.currentTarget;
+          thisItem.classList.add("hover");
+        });
+        header_wrap.addEventListener("mouseleave",(e)=>{
+          const thisItem = e.currentTarget;
+          thisItem.classList.remove("hover");
+          pc_nav_li.forEach((item)=>{
+            const thisItem = item;
+            const thisItemTwoWrap = thisItem.querySelector(".pc_two_list_wrap");
+            thisItem.classList.remove("active");
+            thisItemTwoWrap.classList.remove("motion");
+            setTimeout(()=>{
+              thisItemTwoWrap.classList.remove("active");
+            },30);
+          });
+        });
+      }
+      if(!!pc_nav_li){
+        pc_nav_li.forEach((item)=>{
+          item.addEventListener("mouseenter",(e)=>{
+            const thisItem = e.currentTarget;
+            const thisItemTwoWrap = thisItem.querySelector(".pc_two_list_wrap");
+            const thisItemSiblings = siblings(thisItem);
+            thisItemSiblings.forEach((item)=>{
+              if(item !== thisItem){
+                item.classList.remove("active");
+              }
+            });
+            thisItem.classList.add("active");
+            thisItemTwoWrap.classList.add("active");
+            setTimeout(()=>{
+              thisItemTwoWrap.classList.add("motion");
+            },30);
+          });
+        });
+      }
+    }
+    function scrollTopGo(){
+      const btn_page_control = document.querySelector(".btn_page_control");
+      if(!!btn_page_control){
+        btn_page_control.addEventListener("click",(e)=>{
+          e.preventDefault();
+          window.scrollTo({
+            top : 0,
+            left : 0,
+            behavior : 'smooth'
+          })
+        });
+      }
+    }
+    pcHeader();
+    scrollTopGo();
   }
   
   /**
