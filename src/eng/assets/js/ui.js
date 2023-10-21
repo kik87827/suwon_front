@@ -1,13 +1,14 @@
 window.addEventListener("DOMContentLoaded", () => {
     commonInit();
-    
-  });
-  window.addEventListener("load", () => {
-    layoutFunc();
-  });
+  //deviceDebug();
   
-  $(function() {
-  })
+});
+window.addEventListener("load", () => {
+  layoutFunc();
+});
+
+$(function() {
+})
   
   /**
    * device check
@@ -96,13 +97,45 @@ window.addEventListener("DOMContentLoaded", () => {
             thisItemTwoWrap.classList.add("active");
             setTimeout(()=>{
               thisItemTwoWrap.classList.add("motion");
-            },30);
+            },10);
           });
         });
       }
     }
     function scrollTopGo(){
       const btn_page_control = document.querySelector(".btn_page_control");
+      const page_control_layer = document.querySelector(".page_control_layer");
+      let touchstart = "ontouchstart" in window;
+      let barHeight = 0;
+
+
+      if(!touchstart){
+        barHeight = 0;
+      }else{
+        if(document.querySelector("html").classList.contains("ios")){
+          barHeight = 130;
+        }else{
+          barHeight = 100;
+        }
+      }
+      
+      window.addEventListener("scroll", () => {
+        if(window.innerWidth > 1300){return;}
+        if(document.querySelector("body").scrollHeight - window.innerHeight - barHeight <= window.scrollY){
+          page_control_layer.classList.add("bottom_pos");
+        }else{
+          page_control_layer.classList.remove("bottom_pos");
+        }
+      });
+      
+      window.addEventListener("resize", () => {
+        if(window.innerWidth > 1300){
+          page_control_layer.classList.remove("bottom_pos");
+        }else{
+          page_control_layer.classList.add("bottom_pos");
+        }
+      });
+
       if(!!btn_page_control){
         btn_page_control.addEventListener("click",(e)=>{
           e.preventDefault();
@@ -114,8 +147,77 @@ window.addEventListener("DOMContentLoaded", () => {
         });
       }
     }
+    function mobileNavi(){
+      const mobile_nav_li = document.querySelectorAll(".mobile_nav_list > li");
+      const mb_one_item = document.querySelectorAll(".mb_one_item");
+      const btn_mobile_total = document.querySelectorAll(".btn_mobile_total");
+      const btn_mobile_call = document.querySelector("#btn_mobile_call");
+      const btn_mobile_close = document.querySelector("#btn_mobile_close");
+      const mobile_nav_wrap = document.querySelector(".mobile_nav_wrap");
+      mb_one_item.forEach((item) => {
+        item.addEventListener("click",(e)=>{
+          const t_mobile_nav_li = item.closest(".mobile_nav_list > li");
+          const t_mb_two_list_wrap = t_mobile_nav_li.querySelector(".mb_two_list_wrap");
+          const t_mb_two_list = t_mobile_nav_li.querySelector(".mb_two_list");
+
+          e.preventDefault();
+
+          mobile_nav_li.forEach((item)=>{
+            const t_not_item = item;
+            const t_not_mb_two_list_wrap = t_not_item.querySelector(".mb_two_list_wrap");
+            const t_not_mb_two_list = t_not_item.querySelector(".mb_two_list");
+
+              if(t_not_item !== t_mobile_nav_li){
+                t_not_item.classList.remove("active");
+                t_not_mb_two_list_wrap.style.height = "0px";
+              }
+          });
+  
+          t_mobile_nav_li.classList.toggle("active");
+          if(t_mobile_nav_li.classList.contains("active")){
+            t_mb_two_list_wrap.style.height = t_mb_two_list.getBoundingClientRect().height + "px";
+          }else{
+            t_mb_two_list_wrap.style.height = "0px";
+          }
+          
+        });
+      });
+      
+      btn_mobile_call.addEventListener("click",(e)=>{
+        e.preventDefault();
+        mobile_nav_wrap.classList.add("active");
+        setTimeout(()=>{
+          mobile_nav_wrap.classList.add("motion");
+          btn_mobile_total.forEach((item)=>{
+            item.classList.add("active");
+          });
+        },10);
+      });
+      
+      btn_mobile_close.addEventListener("click",(e)=>{
+        e.preventDefault();
+        closeMobileFunc();
+      });
+
+      window.addEventListener("resize",()=>{
+        if(window.innerWidth <= 1300){
+          closeMobileFunc();
+        }
+      });
+
+      function closeMobileFunc(){
+        mobile_nav_wrap.classList.remove("motion");
+        setTimeout(()=>{
+          mobile_nav_wrap.classList.remove("active");
+        },520);
+        btn_mobile_total.forEach((item)=>{
+          item.classList.remove("active");
+        });
+      }
+    }
     pcHeader();
     scrollTopGo();
+    mobileNavi();
   }
   
   /**
@@ -412,3 +514,10 @@ window.addEventListener("DOMContentLoaded", () => {
       );
     }
   };
+
+
+  function deviceDebug(){
+    const divAppend = document.createElement("div");
+    divAppend.classList.add("debug");
+    document.querySelector("body").append(divAppend);
+  }

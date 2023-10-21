@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./assets/css/common.css" rel="stylesheet">
 	<script src="./assets/js/jquery-3.4.1.min.js"></script>
@@ -76,7 +77,7 @@
 						<li><a href="#" class="header_util_item">KO</a></li>
 						<li><a href="#" class="header_util_item active">EN</a></li>
 					</ul>
-					<a href="javascript:;" class="btn_mobile_total">
+					<a href="javascript:;" class="btn_mobile_total" id="btn_mobile_call">
 						<span class="btn_mobile_total_inner"></span>
 					</a>
 				</div>
@@ -85,7 +86,9 @@
 		<!-- mobile menu -->
 		<div class="mobile_nav_wrap">
 			<div class="mobile_nav_top_row">
-				<span class="mobile_nav_toplogo"><span class="hdtext">SUWON ITS ASIA PACIFIC FORUM 2025</span></span>
+				<div class="mobile_nav_toplogo">
+					<span class="mobile_nav_toplogo_item"><span class="hdtext">SUWON ITS ASIA PACIFIC FORUM 2025</span></span>
+				</div>
 			</div>
 			<div class="mobile_nav_content_row">
 				<div class="mobile_nav_list_wrap">
@@ -139,9 +142,11 @@
 					</ul>
 				</div>
 			</div>
-			<a href="javascript:;" class="btn_mobile_total">
-				<span class="btn_mobile_total_inner"></span>
-			</a>
+			<div class="btn_mobile_total_wrap">
+				<a href="javascript:;" class="btn_mobile_total" id="btn_mobile_close">
+					<span class="btn_mobile_total_inner"></span>
+				</a>
+			</div>
 		</div>
 		<!-- // mobile menu -->
 		<section class="middle_wrap">
@@ -165,10 +170,10 @@
 			<div class="footer_primary_wrap">
 				<div class="footer_primary_container">
 					<address class="footer_address_wrap">
-						<div class="footer_address_item">
+						<div class="footer_address_item type2">
 							<span class="footer_address_key">Address</span>
 							<div class="footer_address_value">
-								31, Seongho-ro, Sangrok-gu, Ansan-si, Gyeonggi-do, Korea
+								#812, Daerung Technotown 15, Simindaero 401, Dongan-gu, Anyang-si, Gyeonggi-do, Republic of Korea, 14057
 							</div>
 						</div>
 						<div class="mobile_address_hr"></div>
