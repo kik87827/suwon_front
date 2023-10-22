@@ -3,9 +3,42 @@
     @@include('./include/_head.html')
 <body class="front_body">
     <div class="page_wrap">
-        @@include('./include/_header.html')
+        <div class="visual_wrap sub">
+            @@include('./include/_header.html')
+            <div class="bg_visual">
+                <img src="./assets/images/op_1x1.png" class="data-respon" data-pc="./assets/images/sub_tit@2x.png" data-tablet="./assets/images/t_sub_tit@2x.png" data-mobile="./assets/images/m_sub_tit@2x.png" alt="">
+            </div>
+            <div class="sub_visual_title_row">
+                <h2 class="sub_visual_title">Congress</h2>
+            </div>
+            <div class="sub_map_list_row">
+                <ul class="sub_map_list">
+                    <li><a href="#" class="sub_map_home"><span class="hdtext">Home</span></a></li>
+                    <li><span class="sub_map_text">Congress</span></li>
+                    <li class="has_current">
+                        <a href="#" class="sub_map_toggle">Previous Congress</a>
+                        <div class="sub_map_toggle_layer">
+                            <div class="sub_map_menu_list_wrap">
+                                <ul class="sub_map_menu_list">
+                                    <li><a href="#" class="sub_map_menu">Greetings</a></li>
+                                    <li><a href="#" class="sub_map_menu">Overview</a></li>
+                                    <li><a href="#" class="sub_map_menu current">Previous Congress</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 		<section class="middle_wrap">
-            내용이 들어갑니다.
+            <div class="middle_contents">
+                <div class="middle_title_row">
+                    <h3 class="middle_title">Previous Congress</h3>
+                </div>
+                <div class="middle_content_row">
+                    내용이 들어갑니다.
+                </div>
+            </div>
 		</section>
         @@include('./include/_footer.html')
     </div>

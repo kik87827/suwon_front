@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", () => {
     commonInit();
   //deviceDebug();
   
+  responImgRendar();
 });
 window.addEventListener("load", () => {
   layoutFunc();
@@ -62,6 +63,7 @@ $(function() {
     function pcHeader(){
       //const pc_nav_list = document.querySelector(".pc_nav_list");
       const header_wrap = document.querySelector(".header_wrap");
+      const header_dim = document.querySelector(".header_dim");
       const pc_nav_li = document.querySelectorAll(".pc_nav_list > li");
       if(!!header_wrap){
         header_wrap.addEventListener("mouseenter",(e)=>{
@@ -79,6 +81,7 @@ $(function() {
             setTimeout(()=>{
               thisItemTwoWrap.classList.remove("active");
             },30);
+            headerDimHide();
           });
         });
       }
@@ -98,8 +101,23 @@ $(function() {
             setTimeout(()=>{
               thisItemTwoWrap.classList.add("motion");
             },10);
+            headerDimShow();
           });
         });
+      }
+
+      function headerDimShow(){
+        header_dim.classList.add("active");
+        setTimeout(()=>{
+          header_dim.classList.add("motion");
+        },10);
+      }
+
+      function headerDimHide(){
+        header_dim.classList.remove("motion");
+        setTimeout(()=>{
+          header_dim.classList.remove("active");
+        },400);
       }
     }
     function scrollTopGo(){
@@ -117,6 +135,10 @@ $(function() {
         }else{
           barHeight = 100;
         }
+      }
+
+      if(window.scrollY == 0){
+        page_control_layer.classList.add("bottom_pos");
       }
       
       window.addEventListener("scroll", () => {
@@ -215,9 +237,63 @@ $(function() {
         });
       }
     }
+    function subMapFuc(){
+      const sub_map_toggle = document.querySelectorAll(".sub_map_toggle");
+      if(!!sub_map_toggle){
+        sub_map_toggle.forEach((item)=>{
+          item.addEventListener("click",(e)=>{
+            e.preventDefault();
+            const thisItem = e.currentTarget;
+            const thisParent = thisItem.closest("li");
+            const thisLayer = thisParent.querySelector(".sub_map_toggle_layer");
+
+            thisParent.classList.toggle("active");
+            if(thisParent.classList.contains("active")){
+              showToggleItem(thisLayer);
+            }else{
+              hideToggleItem(thisLayer);
+            }
+          });
+        });
+        document.querySelector("body").addEventListener("click",(e)=>{
+          if(!e.target.closest(".sub_map_list")){
+            resetToggleItem();
+          }
+        });
+      }
+      function showToggleItem(target){
+        const thisLayer = target;
+        const thisLayerContent = target.querySelector(".sub_map_menu_list_wrap");
+        thisLayer.classList.add("active");
+        thisLayer.style.height = thisLayerContent.getBoundingClientRect().height +"px";
+      }
+      function hideToggleItem(target){
+        const thisLayer = target;
+        thisLayer.style.height = "0px";
+        setTimeout(()=>{
+          thisLayer.classList.remove("active");
+        },400);
+      }
+      function resetToggleItem(){
+        const sub_map_li = document.querySelectorAll(".sub_map_list > li");
+        const sub_map_toggle = document.querySelectorAll(".sub_map_toggle");
+        const sub_map_toggle_layer = document.querySelectorAll(".sub_map_toggle_layer");
+
+        sub_map_li.forEach((item)=>{
+          item.classList.remove("active");
+        });
+        sub_map_toggle_layer.forEach((item)=>{
+          item.style.height = "0px";
+          setTimeout(()=>{
+            item.classList.remove("active");
+          },400);
+        })
+      }
+    }
     pcHeader();
     scrollTopGo();
     mobileNavi();
+    subMapFuc();
   }
   
   /**
@@ -520,4 +596,28 @@ $(function() {
     const divAppend = document.createElement("div");
     divAppend.classList.add("debug");
     document.querySelector("body").append(divAppend);
+  }
+
+  function responImgRendar(){
+    const responImg = document.querySelectorAll(".data-respon");
+
+    action();
+    resizeAction(()=>{
+      action();
+    });
+
+    function action(){
+      responImg.forEach((item)=>{
+        const thisItem = item;
+        if(window.innerWidth <= 1300){
+          if(window.innerWidth <= 768){
+            thisItem.src = thisItem.dataset.mobile;
+          }else{
+            thisItem.src = thisItem.dataset.tablet;
+          }
+        }else{
+          thisItem.src = thisItem.dataset.pc;
+        }
+      });
+    }
   }
