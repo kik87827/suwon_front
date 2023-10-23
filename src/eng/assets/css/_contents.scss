@@ -141,7 +141,24 @@
 .board_count_item{}
 .board_count_key{}
 .board_count_value{}
-.gallery_list_wrap{}
+.gallery_list_wrap{
+    &.skin2{
+        .gallery_list{
+            > li{
+
+            }
+        }
+        .gallery_item{
+
+        }
+        .gallery_thum_row{
+            > img{}
+        }
+        .gallery_spec_row{
+
+        }
+    }
+}
 .gallery_list{
     > li{
         &:last-of-type{}
@@ -158,9 +175,42 @@ li.nodata_li{
 .gallery_thum_row{
     > img{}
 }
+.gallery_media_row{
+    
+}
+.gallery_media_listdata{
+
+}
+.btn_gallery_play{}
+.media_listdata{}
 .gallery_spec_row{}
 .gallery_spec_main{}
 .gallery_spec_sub{}
+
+.gallery_spec_clamp_main{}
+.gallery_spec_clamp_sub{}
+.gallery_spec_else{}
+.previewer_list_wrap{}
+.previewer_list{
+    > li{
+        &:last-of-type{}
+        &.nodata_li{
+            .nodata_para{}
+        }
+    }
+}
+.previewer_item{}
+.previewer_thumnail_cols{
+    img{}
+}
+.previewer_spec_cols{}
+.previewer_spec_main{}
+.previewer_spec_sub{}
+.previewer_btn_cols{}
+.btn_event_box{
+    .ico_down{}
+}
+.btn_event_box_text{}
 
 /* paging */
 .pagination_wrap{display:flex;justify-content: center;margin-top:20px;gap:4px;}
@@ -224,10 +274,14 @@ li.nodata_li{
 
 /* view */
 .view_content_wrap{}
-.view_title_row{}
+.view_title_row{
+    & + .view_render_data_row{}
+}
 .view_title_main{}
 .view_title_else{}
-.view_render_data_row{}
+.view_render_data_row{
+    & + .view_file_item_row{}
+}
 .gallery_swiper_wrap{}
 .gallery_view_wrap{
     & + .view_getdata_render{}
@@ -287,3 +341,20 @@ li.nodata_li{
 .btn_bottom_row{}
 .btn_submit_box{}
 .btn_submit_box_text{}
+
+.view_getdata_primary_img{
+    > img{}
+
+    & + .view_getdata_render{}
+}
+
+.data_linkage_box{}
+.data_linkage_title_row{}
+.data_linkage_title{}
+.data_linkage_content_row{}
+.data_linkage_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.data_linkage_item{}
