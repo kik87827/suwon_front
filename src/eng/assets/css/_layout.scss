@@ -601,7 +601,9 @@ html:not(.touchmode) {
     text-align: center;
 }
 .middle_title{font-size:40px;color:#292a2e;font-weight:700;word-break: keep-all;}
-.middle_content_row{margin:70px auto 0;max-width:1300px;}
+.middle_content_row{margin:70px auto 0;max-width:1300px;
+    &.type2{margin-top:50px;}
+}
 
 @media (max-width:$tablet){
     .sub_visual_title_row{padding:56px 24px 40px;}
@@ -624,7 +626,9 @@ html:not(.touchmode) {
     }
     .sub_map_text.define_current{display:block; padding:13px 24px;background: rgba(0, 0, 0, 0.2);}
     .sub_map_toggle_layer{width:100%;left:0;top:100%;transform: translateX(0);}
-    .middle_content_row{margin-top:16px;}
+    .middle_content_row{margin-top:16px;
+        &.type2{margin-top:24px;}
+    }
     .middle_title{font-size:24px;}
     .middle_contents{
         padding:50px 24px;

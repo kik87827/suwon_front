@@ -51,6 +51,7 @@ input:-webkit-autofill {
     -webkit-background-clip: text;
 }
 .pcbr{display:block !important;}
+.tbr{display:none !important;}
 .mbr{display:none !important;}
 .pc_img{display:inline-block !important;}
 .mb_img{display:none !important;}
@@ -63,6 +64,9 @@ input:-webkit-autofill {
 .none{display:none !important;}
 
 
+@media (max-width:$tablet){
+    .tbr{display:block !important;}
+}
 @media (max-width:$mobile){
     .mbr{display:block !important;}
 }

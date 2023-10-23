@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   commonInit();
   //deviceDebug();
-
+  tabFunc();
   responImgRendar();
 });
 window.addEventListener("load", () => {
@@ -625,6 +625,39 @@ function responImgRendar() {
       } else {
         thisItem.src = thisItem.dataset.pc;
       }
+    });
+  }
+}
+
+
+function tabFunc() {
+  const tabmenu = document.querySelectorAll("[name='tabmenu']");
+  if (!!tabmenu) {
+    tabmenu.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        const thisEvent = e.currentTarget;
+        const thisEventParent = thisEvent.closest("li");
+        const thisTargetObj = thisEvent.getAttribute("href");
+        const thisTargetDom = document.querySelector(thisTargetObj);
+        const thisEventNot = siblings(thisEventParent);
+        const thisTargetNot = siblings(thisTargetDom);
+
+        thisEventNot.forEach((item) => {
+          if (item !== thisEvent) {
+            item.classList.remove("active");
+          }
+        })
+        thisEventParent.classList.add("active");
+        if (!!thisTargetDom) {
+          thisTargetNot.forEach((item) => {
+            if (item !== thisTargetDom) {
+              item.classList.remove("active");
+            }
+          })
+          thisTargetDom.classList.add("active");
+        }
+      });
     });
   }
 }

@@ -201,6 +201,10 @@ input:-webkit-autofill {
   display: block !important;
 }
 
+.tbr {
+  display: none !important;
+}
+
 .mbr {
   display: none !important;
 }
@@ -249,6 +253,11 @@ input:-webkit-autofill {
   display: none !important;
 }
 
+@media (max-width: 1299px) {
+  .tbr {
+    display: block !important;
+  }
+}
 @media (max-width: 767px) {
   .mbr {
     display: block !important;
@@ -1968,6 +1977,9 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
   margin: 70px auto 0;
   max-width: 1300px;
 }
+.middle_content_row.type2 {
+  margin-top: 50px;
+}
 
 @media (max-width: 1299px) {
   .sub_visual_title_row {
@@ -2009,6 +2021,9 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
   }
   .middle_content_row {
     margin-top: 16px;
+  }
+  .middle_content_row.type2 {
+    margin-top: 24px;
   }
   .middle_title {
     font-size: 24px;
@@ -2062,7 +2077,105 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
   left: 0;
 }
 
-/* contents */
+.tab_box_list_wrap {
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab_box_list {
+  display: flex;
+  gap: 1px;
+  min-height: 60px;
+}
+.tab_box_list > li {
+  flex: 1;
+  display: flex;
+}
+.tab_box_list > li.active .tab_box {
+  background: #133592;
+}
+.tab_box {
+  background: #b5bbcb;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tab_box_text {
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  word-break: keep-all;
+}
+
+.tab_contents_wrap {
+  margin-top: 90px;
+}
+.tab_contents_wrap.type2 {
+  margin-top: 0;
+}
+.tab_contents_wrap.type2 .tab_contents_inner {
+  margin-top: 70px;
+}
+
+.tab_contents {
+  display: none;
+}
+.tab_contents.active {
+  display: block;
+}
+
+.tab_subtext_list_wrap {
+  margin-top: 20px;
+}
+
+.tab_subtext_list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.tab_subtext_list > li.active .tab_subtext {
+  border-color: #133592;
+}
+.tab_subtext_list > li.active .tab_subtext .tab_subtext_in {
+  color: #133592;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+}
+.tab_subtext {
+  display: inline-flex;
+  min-height: 38px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 98px;
+  border-bottom: 2px solid transparent;
+}
+.tab_subtext.type2 {
+  min-width: 280px;
+  padding: 0 17px;
+  box-sizing: border-box;
+}
+
+.tab_subtext_in {
+  font-size: 15px;
+  color: #63677b;
+  display: inline-block;
+  padding: 5px;
+}
+
+.tab_subcontents {
+  display: none;
+}
+.tab_subcontents.active {
+  display: block;
+}
+
 @media (max-width: 1299px) {
   .design_bullet_para {
     font-size: 16px;
@@ -2070,7 +2183,70 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
   .design_bullet_para:before {
     top: 2px;
   }
+  .tab_contents_wrap {
+    margin-top: 60px;
+  }
+  .tab_contents_wrap.type2 .tab_contents_inner {
+    margin-top: 40px;
+  }
+  .tab_box_list {
+    min-height: 44px;
+  }
+  .tab_box_text {
+    font-size: 14px;
+    padding: 0;
+  }
+  .tab_subtext_list_wrap {
+    margin-top: 12px;
+  }
+  .tab_subtext_list {
+    gap: 0;
+  }
+  .tab_subtext_list > li {
+    flex: 1;
+  }
+  .tab_subtext_list > li.active .tab_subtext .tab_subtext_in {
+    letter-spacing: 0;
+  }
+  .tab_subtext {
+    min-width: 0;
+    display: flex;
+  }
+  .tab_subtext.type2 {
+    min-width: 0;
+    padding: 0;
+  }
+  .tab_subtext.type2 .tab_subtext_in {
+    padding: 8px;
+  }
+  .tab_subtext_in {
+    font-size: 14px;
+  }
 }
+@media (max-width: 767px) {
+  .tab_box_list.break_type {
+    flex-wrap: wrap;
+    gap: 1px;
+  }
+  .tab_box_list.break_type > li {
+    flex: 0 0 calc(50% - 0.5px);
+    box-sizing: border-box;
+  }
+  .tab_box_list.break_type > li.active {
+    position: relative;
+    z-index: 1;
+  }
+  .tab_box_list.break_type .tab_box_text {
+    padding: 15px 8px;
+  }
+  .tab_contents_wrap {
+    margin-top: 40px;
+  }
+  .tab_contents_wrap.type2 .tab_contents_inner {
+    margin-top: 40px;
+  }
+}
+/* contents */
 /* main */
 .page_wrap.main {
   min-height: 0;
