@@ -606,7 +606,7 @@ function deviceDebug() {
 }
 
 function responImgRendar() {
-  const responImg = document.querySelectorAll(".data-respon");
+  const responImg = document.querySelectorAll(".data_respon");
 
   action();
   resizeAction(() => {

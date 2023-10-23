@@ -61,3 +61,13 @@ input:-webkit-autofill {
 .ellips{display:inline-block; white-space: nowrap; text-overflow: ellipsis;overflow:hidden;position:relative; max-width:99%;}
 .hdtext{display:inline-block;width:0;height:0;overflow:hidden;line-height:0;color:transparent;position:absolute;top:0;left:-99999px;}
 .none{display:none !important;}
+
+
+@media (max-width:$mobile){
+    .mbr{display:block !important;}
+}
+
+
+@media (max-width:$mobile_small){
+    .mbr{display:none !important;}
+}
