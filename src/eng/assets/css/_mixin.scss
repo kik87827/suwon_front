@@ -8,7 +8,8 @@ $secondary : #25b0f5;
 
 $tablet : 1299px;
 $mobile : 767px;
-$mobile_small : 365px;
+$mobile_small : 359px;
+$mobile_xsmall : 319px;
 
 $warn : #e84854;
 
@@ -30,5 +31,5 @@ $warn : #e84854;
 }
 
 @mixin clamp ($count) {
-    color:#000000;word-break:break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:$count;overflow: hidden;
+    word-break:break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:$count;overflow: hidden;
 }

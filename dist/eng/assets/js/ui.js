@@ -684,11 +684,10 @@ function galleryViewSwiper() {
             speed: 1000,
             slidesPerView: 5,
             loop: true,
-            spaceBetween: 10,
             navigation: {
               nextEl: '.gallery_swiper_wrap .btn_thumnail_control.next',
               prevEl: '.gallery_swiper_wrap .btn_thumnail_control.prev',
-            },
+            }
           });
         }
       } else {

@@ -601,9 +601,14 @@ html:not(.touchmode) {
     text-align: center;
 }
 .middle_title{font-size:40px;color:#292a2e;font-weight:700;word-break: keep-all;}
-.middle_title_subcopy{}
+.middle_title_subcopy{font-size: 20px; margin-top:25px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: center;
+    color: #545760;}
 .middle_content_row{margin:70px auto 0;max-width:1300px;
     &.type2{margin-top:50px;}
+    &.type3{margin-top:40px;}
 }
 
 @media (max-width:$tablet){
@@ -629,11 +634,14 @@ html:not(.touchmode) {
     .sub_map_toggle_layer{width:100%;left:0;top:100%;transform: translateX(0);}
     .middle_content_row{margin-top:16px;
         &.type2{margin-top:24px;}
+        &.type3{margin-top:24px;}
     }
     .middle_title{font-size:24px;}
     .middle_contents{
         padding:50px 24px;
     }
+
+    .middle_title_subcopy{margin-top:16px;font-size:16px;}
 }
 
 @media (max-width:$mobile){
