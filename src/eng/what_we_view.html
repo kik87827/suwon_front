@@ -32,48 +32,33 @@
                         </div>
                         <div class="view_render_data_row">
                             <div class="gallery_swiper_wrap">
-                                <div class="gallery_view_wrap">
-                                    <div class="swiper-container gallery_view_container">
-                                        <div class="swiper-slide">
-                                            <div class="gallery_view_img"><img src="./assets/images/img_1110x740.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_view_img"><img src="./assets/images/img_1110x740_02.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_view_img"><img src="./assets/images/img_1110x740_03.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_view_img"><img src="./assets/images/img_1110x740.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_view_img"><img src="./assets/images/img_1110x740_02.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_view_img"><img src="./assets/images/img_1110x740_03.png" alt=""></div>
-                                        </div>
+                                <div class="gallery_view_row">
+                                    <div class="gallery_view_img_wrap">
+                                        <img src="./assets/images/img_1110x740.png" class="gallery_view_img" alt="">
                                     </div>
                                 </div>
-                                <div class="gallery_thumnail_wrap">
+                                <div class="gallery_thumnail_row">
                                     <button type="button" class="btn_thumnail_control prev"><span class="hdtext">Prev</span></button>
                                     <div class="swiper-container gallery_thumnail_container">
-                                        <div class="swiper-slide">
-                                            <div class="gallery_thumnail_img"><img src="./assets/images/img_1110x740.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_02.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_03.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_thumnail_img"><img src="./assets/images/img_1110x740.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_02.png" alt=""></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_03.png" alt=""></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;" class="gallery_thumnail_img"><img src="./assets/images/img_1110x740.png" alt=""></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;" class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_02.png" alt=""></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;" class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_03.png" alt=""></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;" class="gallery_thumnail_img"><img src="./assets/images/img_1110x740.png" alt=""></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;" class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_02.png" alt=""></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;" class="gallery_thumnail_img"><img src="./assets/images/img_1110x740_03.png" alt=""></a>
+                                            </div>
                                         </div>
                                     </div>
                                     <button type="button" class="btn_thumnail_control next"><span class="hdtext">Next</span></button>
@@ -138,6 +123,11 @@
                 </div>
             </div>
 		</section>
+        <script>
+            window.addEventListener("load",()=>{
+                galleryViewSwiper();
+            })
+        </script>
         @@include('./include/_footer.html')
     </div>
 </body>
