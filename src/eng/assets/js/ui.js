@@ -221,11 +221,11 @@ $(function() {
         closeMobileFunc();
       });
 
-      window.addEventListener("resize",()=>{
-        if(window.innerWidth <= 1300){
-          closeMobileFunc();
-        }
-      });
+      // window.addEventListener("resize",()=>{
+      //   if(window.innerWidth <= 1300){
+      //     closeMobileFunc();
+      //   }
+      // });
 
       function closeMobileFunc(){
         mobile_nav_wrap.classList.remove("motion");

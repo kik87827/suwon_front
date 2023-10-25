@@ -1255,6 +1255,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   z-index: 100;
   flex-direction: column;
   overflow: hidden;
+  z-index: 10 !important;
 }
 .mobile_nav_wrap:before {
   display: block;

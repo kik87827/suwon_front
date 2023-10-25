@@ -164,7 +164,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;bo
 
 
 .mobile_nav_wrap{
-    display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;flex-direction:column; overflow: hidden;
+    display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;flex-direction:column; overflow: hidden; z-index:10 !important;
     &:before{display:block;content:'';width:40px;height:40px;background:$primary;border-radius:100%;position: fixed;top:8px;right:16px;transform:scale(0);transform-origin: 50% 50%;transition:.5s;}
     > *{position:relative;z-index:2;}
     &.active{display:flex;
