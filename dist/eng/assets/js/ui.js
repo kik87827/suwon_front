@@ -179,6 +179,7 @@ function layoutFunc() {
     const btn_mobile_call = document.querySelector("#btn_mobile_call");
     const btn_mobile_close = document.querySelector("#btn_mobile_close");
     const mobile_nav_wrap = document.querySelector(".mobile_nav_wrap");
+    const bodyDom = document.querySelector("body");
     mb_one_item.forEach((item) => {
       item.addEventListener("click", (e) => {
         const t_mobile_nav_li = item.closest(".mobile_nav_list > li");
@@ -215,6 +216,7 @@ function layoutFunc() {
         mobile_nav_wrap.classList.add("motion");
         btn_mobile_total.forEach((item) => {
           item.classList.add("active");
+          bodyDom.classList.add("touchDis");
         });
       }, 10);
     });
@@ -232,6 +234,7 @@ function layoutFunc() {
 
     function closeMobileFunc() {
       mobile_nav_wrap.classList.remove("motion");
+      bodyDom.classList.remove("touchDis");
       setTimeout(() => {
         mobile_nav_wrap.classList.remove("active");
       }, 520);
@@ -260,7 +263,7 @@ function layoutFunc() {
         });
       });
       document.querySelector("body").addEventListener("click", (e) => {
-        if (!e.target.closest(".sub_map_list")) {
+        if (!e.target.closest(".has_current")) {
           resetToggleItem();
         }
       });
