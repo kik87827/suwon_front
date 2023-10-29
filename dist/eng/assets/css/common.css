@@ -972,12 +972,12 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   opacity: 0;
   transition: 0.4s opacity;
   width: 100%;
-  height: calc(100% - 140px);
+  height: 100%;
   background: #000;
   position: fixed;
-  top: 140px;
+  top: 0;
   left: 0;
-  z-index: 30;
+  z-index: 6;
 }
 .header_dim.active {
   display: block;
@@ -1695,7 +1695,7 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
     right: 16px;
   }
   .header_dim {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
@@ -2722,6 +2722,11 @@ li.nodata_li {
   font-size: 22px;
   font-weight: 600;
   color: #292a2e;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .view_title_else {

@@ -1,4 +1,7 @@
 /* components */
+.primary_emp{
+    *{}
+}
 .dark_emp{}
 .underline{}
 .design_bullet_para{
@@ -441,7 +444,7 @@ li.nodata_li{
     display:flex;align-items:center; gap:20px;
     & + .view_render_data_row{}
 }
-.view_title_main{flex:1;min-width:0;font-size: 22px;font-weight: 600;color: #292a2e;
+.view_title_main{flex:1;min-width:0;font-size: 22px;font-weight: 600;color: #292a2e; @include clamp(3);
 }
 .view_title_else{font-size:14px;color:#63677b;line-height:1;}
 .view_render_data_row{
@@ -878,6 +881,156 @@ li.nodata_li{
 .greet_img_group{
     img{}
 }
+
+.cont_inner_title_row{}
+.cont_inner_title{}
+.cont_inner_content_row{}
+.cont_inner_copy_group{}
+.cont_inner_copy{
+    &:last-of-type{}
+}
+.cont_diagram_img{}
+.step_diagram_list{
+    > li {
+        &:after{}
+        &:last-of-type{}
+    }
+}
+.step_diagram_item{}
+.ico_step_row{}
+.ico_step_diagram{
+    &.ico_step_01{}
+    &.ico_step_02{}
+    &.ico_step_03{}
+    &.ico_step_04{}
+    &.ico_step_05{}
+    &.ico_step_06{}
+    &.ico_step_07{}
+}
+.spec_step_row{}
+.spec_step_caption{}
+.spec_step_data{}
+
+
+.midcont_intro_copy_wrap{}
+.midcont_intro_copy{}
+
+.column_item_wrap{}
+.column_item{
+    &:last-of-type{}
+}
+.column_item_title{}
+.column_item_content{}
+.diagram_overview_wrap{}
+.diagram_overview_img{
+    img{}
+}
+.diagram_overview_item_list{
+    >li{
+        &:last-of-type{}
+    }
+}
+.diagram_overview_item{}
+.diagram_overview_ico{
+    &.ico_city{}
+    &.ico_size{}
+    &.ico_population{}
+    &.ico_division{}
+}
+.diagram_overview_spec_wrap{
+
+}
+.diagram_overview_spec_sub{}
+.diagram_overview_spec_main{}
+.diagram_overview_spec_else{}
+.diagram_overview_spec_unit{}
+
+.figure_item_list_wrap{}
+.figure_item_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.figure_item{}
+.figure_thum_row{
+    img{}
+}
+.figure_spec_row{}
+.figure_spec_main{}
+.figure_spec_sub{}
+
+.organ_img_wrap{
+    img{}
+}
+.copy_detail_list_wrap{
+
+}
+.copy_detail_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.copy_detail_title{}
+.copy_detail_sub_group{
+
+}
+.copy_detail_sub{
+    &.primary_emp{}
+}
+.dot_bullet_list{
+    > li{
+        &:before{}
+        &:last-of-type{}
+    }
+
+    &.flex_type{
+        > li{
+            &:before{}
+            &:last-of-type{}
+        }
+    }
+}
+
+.fiqure_both_item{
+
+}
+.fiqure_image_cols{
+    img{}
+}
+.fiqure_spec_cols{
+
+}
+.copy_detail_list{
+    > li {
+        &:last-of-type{}
+    }
+}
+
+.emp_word_copy_wrap{}
+.emp_word_copy{}
+.emp_word_sub{}
+.emp_word_main{}
+.global_city_wrap{
+    img{}
+}
+
+.photo_item_list_wrap{
+
+}
+.photo_item_list{
+    > li {
+        &:last-of-type{}
+    }
+}
+
+.photo_item{}
+.photo_thum_row{
+    img{}
+}
+.photo_spec_row{}
+.photo_spec_main{}
+.photo_spec_sub{}
+
 @media (max-width:$tablet){
     
 }
