@@ -534,6 +534,13 @@ li.nodata_li{
 .view_other_data_table{display:table;width:100%;}
 .view_other_data_tr{
     display:table-row;
+    &:hover{
+        .view_other_data_key{color:$primary;font-weight:600;letter-spacing: -0.3px;
+            &:before{border-color:$primary;}
+        }
+        .view_other_data_cell{background:#f9fafd}
+        .view_other_data_value{font-weight:600;letter-spacing: -0.2px;}
+    }
     &:last-of-type{}
 }
 .view_other_data_cell{
@@ -564,6 +571,10 @@ li.nodata_li{
     background-color: #fff;
     &.type2{background:$primary; border-color:$primary;
         .btn_submit_box_text{color:#fff;}
+    }
+    &:hover{
+        border-color:$primary;
+        .btn_submit_box_text{color:$primary;}
     }
 }
 .btn_submit_box_text{font-size: 16px;display:inline-block;
@@ -674,7 +685,7 @@ li.nodata_li{
     .view_other_data_row{margin-top:30px;}
 
     .view_other_data_cell{
-        &.cell_th{padding:15px 24px 15px 0;}
+        &.cell_th{padding:15px 24px 15px 7px;}
         &.cell_td{padding:15px 10px 15px 0;}
     }
 

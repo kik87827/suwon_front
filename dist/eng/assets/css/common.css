@@ -2899,6 +2899,21 @@ li.nodata_li {
 .view_other_data_tr {
   display: table-row;
 }
+.view_other_data_tr:hover .view_other_data_key {
+  color: #133592;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.view_other_data_tr:hover .view_other_data_key:before {
+  border-color: #133592;
+}
+.view_other_data_tr:hover .view_other_data_cell {
+  background: #f9fafd;
+}
+.view_other_data_tr:hover .view_other_data_value {
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
 .view_other_data_cell {
   display: table-cell;
   vertical-align: middle;
@@ -2975,6 +2990,12 @@ li.nodata_li {
 }
 .btn_submit_box.type2 .btn_submit_box_text {
   color: #fff;
+}
+.btn_submit_box:hover {
+  border-color: #133592;
+}
+.btn_submit_box:hover .btn_submit_box_text {
+  color: #133592;
 }
 
 .btn_submit_box_text {
@@ -3169,7 +3190,7 @@ li.nodata_li {
     margin-top: 30px;
   }
   .view_other_data_cell.cell_th {
-    padding: 15px 24px 15px 0;
+    padding: 15px 24px 15px 7px;
   }
   .view_other_data_cell.cell_td {
     padding: 15px 10px 15px 0;
