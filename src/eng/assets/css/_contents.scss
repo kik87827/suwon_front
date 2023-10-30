@@ -2,6 +2,9 @@
 .primary_emp{
     *{}
 }
+.text_emp_primary{
+    *{}
+}
 .dark_emp{}
 .underline{}
 .design_bullet_para{
@@ -473,6 +476,7 @@ li.nodata_li{
 }
 .gallery_thumnail_img{
     position:relative;overflow:hidden;height:100px; width:100px; background:#f0f0f0; border-radius:4px; display:block; border:1px solid transparent; box-sizing: border-box; margin:0 auto;
+    &:hover,
     &.active{border-color:$primary;}
     img{@include dataImage}
 }
@@ -489,6 +493,10 @@ li.nodata_li{
     }
     &.next{
         &:after{}
+    }
+
+    &:hover{
+        &:after{border-color:$primary;}
     }
 }
 .view_getdata_render{
@@ -1030,6 +1038,117 @@ li.nodata_li{
 .photo_spec_row{}
 .photo_spec_main{}
 .photo_spec_sub{}
+
+.diagram_system_wrap{}
+.diagram_system_vitem{
+    &.emp_bg{}
+}
+.diagram_system_title_row{}
+.diagram_system_title{}
+.diagram_system_content{
+    .dot_bullet_list{}
+}
+.diagram_system_box_list_wrap{
+    &.type2{
+        .diagram_system_box_list{
+            > li{}
+        }
+        .diagram_system_box{}
+        .diagram_system_caption_row{}
+        .diagram_system_caption{}
+    }
+}
+.diagram_system_box_list{
+    > li{
+        &:after{
+
+        }
+        &:last-of-type{
+            &:after{}
+        }
+
+        &.step_dia{
+
+        }
+    }
+}
+.diagram_system_box{
+
+}
+.diagram_system_caption_row{
+
+}
+.diagram_system_caption{}
+.diagram_system_box_content{}
+.diagram_system_vcont_group{
+
+}
+.diagram_system_vcont{
+    &:last-of-type{
+    }
+    .img_bullet_list{}
+}
+.diagram_count_label{
+
+}
+.diagram_count_wrap{
+
+}
+.digram_count_number{}
+.digram_count_unit{}
+
+.img_bullet_list{
+    > li{
+        &:last-of-type{}
+    }
+
+    .ico_bullet{
+        &.ico_check{}
+    }
+
+    .ico_bullet_text{}
+}
+
+.diagram_summary_figure{
+    img{}
+}
+
+.diagram_step_item{
+
+}
+.content_step_row{
+    .ico_step_dia{}
+}
+.text_step_para{}
+.allow_step_row{
+    .ico_allow_step{}
+}
+
+.diagram_system_supplement{
+
+}
+.diagram_summary_figure_sub{
+    img{}
+}
+
+.compare_item_wrap{}
+.compare_before_item{}
+.compare_item_label{}
+.compare_item_main{}
+.compare_allow_item{}
+.ico_compare_allow{}
+.compare_after_item{}
+.compare_bigbox_wrap{}
+.compare_bigbox{}
+
+.diagram_photo_wrap{}
+.diagram_photo_main{
+    img{}
+}
+.diagram_photo_sub{
+    img{}
+}
+.diagram_photo_wrap{}
 
 @media (max-width:$tablet){
     

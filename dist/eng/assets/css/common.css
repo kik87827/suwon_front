@@ -2786,7 +2786,7 @@ li.nodata_li {
   box-sizing: border-box;
   margin: 0 auto;
 }
-.gallery_thumnail_img.active {
+.gallery_thumnail_img:hover, .gallery_thumnail_img.active {
   border-color: #133592;
 }
 .gallery_thumnail_img img {
@@ -2835,6 +2835,10 @@ li.nodata_li {
   transform: rotate(225deg);
   left: 14px;
 }
+.btn_thumnail_control:hover:after {
+  border-color: #133592;
+}
+
 .view_getdata_render {
   font-size: 16px;
   font-weight: 300;
