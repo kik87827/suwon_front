@@ -600,7 +600,7 @@ li.nodata_li{
         &:last-of-type{border-bottom:0;}
     }
 }
-.data_linkage_item{font-size: 16px;line-height: 1.38;color: #545760; @include clamp(2)}
+.data_linkage_item{font-size: 16px;line-height: 1.38;color: #545760; @include clamp(1)}
 
 @media (max-width:$tablet){
     .gallery_list{

@@ -558,11 +558,13 @@ html:not(.touchmode) {
 .sub_map_toggle{
     position:relative;padding-right:16px;
     &:after{display:block;content:'';width:16px;height:16px;background:url("../images/ic_nv_arrow_sb@2x.png") no-repeat 0 0/100% auto;position:absolute;top:0;right:0;}
-
+    &:hover,
     &.active{
 
         &:after{background-position:0 100%;}
     }
+
+
 }
 
 .sub_map_toggle_layer{
@@ -623,7 +625,9 @@ html:not(.touchmode) {
             }
             &.has_current{
                 display:block; flex:1;
-                
+                &.active{
+                    .sub_map_toggle{background: rgba(19, 53, 146, 0.5);}
+                }
             }
         }
     }
@@ -642,6 +646,9 @@ html:not(.touchmode) {
     }
 
     .middle_title_subcopy{margin-top:16px;font-size:16px;}
+
+    .sub_map_menu_list_wrap{padding:0;}
+    .sub_map_menu{padding:12px;}
 }
 
 @media (max-width:$mobile){
