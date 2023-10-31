@@ -1266,6 +1266,100 @@ li.nodata_li{
     .primary_emp{}
 }
 
+.intro_photo_item_zone{}
+.intro_photo_item{
+    img{}
+}
+.intro_photo_copy_layer{}
+.intro_photo_copy{
+    .emp{}
+}
+
+.detail_contents_zone{}
+.detail_contents_vitem{
+    &.type2{
+
+    }
+}
+.detail_contents_title{}
+.detail_photo_item_group{
+
+}
+.detail_photo_item{
+    &:last-of-type{}
+}
+.detail_photo_title{
+    .emp{}
+}
+
+.detail_photo_content_row{}
+.detail_photo_list{
+    > li {
+        &:last-of-type{}
+    }
+}
+
+.detail_photo_item{}
+.detail_photo_thum{
+    img{}
+}
+.detail_photo_spec{}
+
+.detail_contents_title{}
+
+.detail_vcont_item_wrap{}
+
+.detail_vcont_item{
+    &:last-of-type{}
+}
+
+.detail_vcont_copy_group{}
+.detail_vcont_main_copy{}
+.detail_vcont_sub_copy{}
+
+.detail_vcont_api_rendar{
+
+}
+
+.detail_vctitle_wrap{
+
+}
+
+.ico_vc{
+    &.ico_subway{}
+    &.ico_bus{}
+    &.ico_air{}
+    &.ico_car{}
+}
+
+.detail_vctitle{}
+
+.detail_caption_wrap{}
+.detail_caption_para{}
+.detail_cation_text_list{
+    > li {
+        &:after{}
+        &:last-of-type{}
+    }
+}
+.detail_vcmap_wrap{
+    img{}
+}
+
+.detail_caption_vertical_item{
+    .detail_caption_para{}
+    .detail_cation_text_list{}
+    &:last-of-type{}
+}
+
+.detail_tree_bullet_list{
+    > li{
+        &:before{}
+        &:last-of-type{}
+        .detail_cation_text_list{}
+    }
+}
+
 @media (max-width:$tablet){
     
 }
