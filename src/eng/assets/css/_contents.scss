@@ -1,4 +1,7 @@
 /* components */
+.bold{
+    *{}
+}
 .primary_emp{
     *{}
 }
@@ -1160,6 +1163,61 @@ li.nodata_li{
     img{}
 }
 .diagram_photo_wrap{}
+
+.intro_global_logo_wrap{
+    img{}
+}
+
+.global_contents_wrap{
+
+}
+
+.global_figure_copy{
+    .primary_emp{}
+}
+
+.global_list_group{
+
+}
+
+.global_logo_list_wrap{
+
+}
+
+.global_logo_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+
+.global_logo{
+    img{}
+    &:hover{
+        .global_img_hover_wrap{
+            .hover_para{}
+        }
+    }
+}
+
+.global_img_hover_wrap{
+    .hover_para{}
+}
+
+.global_paper_list_wrap{
+
+}
+
+.global_paper_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+
+.global_paper{
+    img{}
+    &:hover{
+    }
+}
 
 @media (max-width:$tablet){
     
