@@ -1219,6 +1219,53 @@ li.nodata_li{
     }
 }
 
+.overview_intro_zone{}
+.overview_intro_copy{}
+.overview_intro_box_list_wrap{}
+.overview_intro_box_list{
+    > li{}
+}
+.overview_intro_box{
+    &:nth-of-type(2n){}
+}
+.overview_box_ico_row{}
+.ico_overview{
+    &.ico_01{}
+    &.ico_02{}
+    &.ico_03{}
+    &.ico_04{}
+    &.ico_05{}
+}
+.overview_box_spec_row{}
+.overview_box_spec_main{}
+.overview_box_spec_sub{}
+
+.overview_detail_zone{}
+.overview_detail_title{}
+.overview_detail_content_wrap{}
+.schedule_table_wrap{}
+.schedule_table{
+    th,td{}
+    th{
+        &.th_bg01{}
+        &.th_bg02{}
+        &.th_bg03{}
+        &.th_bg04{}
+    }
+    td{
+        &.td_bg01{}
+        &.td_bg02{}
+        &.td_bg03{}
+        &.td_bg04{}
+
+        &.important_cell{}
+    }
+}
+.sch_thtext{}
+.sch_tdtext{
+    .primary_emp{}
+}
+
 @media (max-width:$tablet){
     
 }
