@@ -3544,6 +3544,7 @@ li.nodata_li {
 
 .cont_inner_title_row {
   margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .cont_inner_title {
@@ -3562,6 +3563,7 @@ li.nodata_li {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 0 10px;
 }
 
 .cont_inner_copy {
@@ -3571,6 +3573,7 @@ li.nodata_li {
   margin-top: 30px;
   background: #f9f9fc;
   padding: 60px 30px;
+  border-radius: 4px;
 }
 
 .step_diagram_list {
