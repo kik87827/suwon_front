@@ -598,6 +598,7 @@ html:not(.touchmode) {
 }
 .middle_contents{
     padding:100px 30px 120px;
+    &.type3{padding-top:30px;}
     &.type2{padding-bottom:0;}
 }
 .middle_title_row{
@@ -612,6 +613,7 @@ html:not(.touchmode) {
 .middle_content_row{margin:70px auto 0;max-width:1300px;
     &.type2{margin-top:50px;}
     &.type3{margin-top:40px;}
+    &.type4{margin-top:30px;}
 }
 
 @media (max-width:$tablet){
@@ -640,6 +642,7 @@ html:not(.touchmode) {
     .middle_content_row{margin-top:16px;
         &.type2{margin-top:24px;}
         &.type3{margin-top:24px;}
+        &.type4{margin-top:16px;}
     }
     .middle_title{font-size:24px;}
     .middle_contents{

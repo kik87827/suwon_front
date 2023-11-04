@@ -64,7 +64,9 @@ input:-webkit-autofill {
 .none{display:none !important;}
 
 
+
 @media (max-width:$tablet){
+    .pcbr{display:none !important;}
     .tbr{display:block !important;}
 }
 @media (max-width:$mobile){
