@@ -558,7 +558,6 @@ html:not(.touchmode) {
 .sub_map_toggle{
     position:relative;padding-right:16px;
     &:after{display:block;content:'';width:16px;height:16px;background:url("../images/ic_nv_arrow_sb@2x.png") no-repeat 0 0/100% auto;position:absolute;top:0;right:0;}
-    &:hover,
     &.active{
 
         &:after{background-position:0 100%;}
@@ -600,6 +599,7 @@ html:not(.touchmode) {
     padding:100px 30px 120px;
     &.type3{padding-top:30px;}
     &.type2{padding-bottom:0;}
+    &.type4{padding-bottom:0;}
 }
 .middle_title_row{
     text-align: center;
