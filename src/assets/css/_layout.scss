@@ -299,9 +299,9 @@ html:not(.touchmode) {
 }
 .footer_logo{
     display:inline-block;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;vertical-align:top;
-    &.logo_partner01{background-image:url("../images/logo_transport_en@2x.png");width:202px;height:50px;}
-    &.logo_partner02{background-image:url("../images/logo_suwon_en@2x.png");width:92px;height:50px;}
-    &.logo_partner03{background-image:url("../images/logo_its_en@2x.png");width:157px;height:50px;}
+    &.logo_partner01{background-image:url("../images/logo_transport_ko@2x.png");width:134px;height:50px;}
+    &.logo_partner02{background-image:url("../images/logo_suwon_ko@2x.png");width:92px;height:50px;}
+    &.logo_partner03{background-image:url("../images/logo_its_ko@2x.png");width:230px;height:50px;}
 }
 
 .footer_primary_wrap{background:#32323d;}
@@ -396,9 +396,9 @@ html:not(.touchmode) {
 
     .footer_logo_list{gap:16px;}
     .footer_logo{
-        &.logo_partner01{width:138px;height:34px;}
-        &.logo_partner02{width:63px;height:34px;}
-        &.logo_partner03{width:107px;height:34px;}
+        &.logo_partner01{width:91px;height:34px;}
+        &.logo_partner02{width:62px;height:34px;}
+        &.logo_partner03{width:156px;height:34px;}
     }
 
     .page_control_layer{bottom:16px;right:16px;}

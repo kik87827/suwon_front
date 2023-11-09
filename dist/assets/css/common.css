@@ -208,6 +208,10 @@ input:-webkit-autofill {
   display: none !important;
 }
 
+.mb_br {
+  display: none !important;
+}
+
 .pc_img {
   display: inline-block !important;
 }
@@ -262,6 +266,9 @@ input:-webkit-autofill {
 }
 @media (max-width: 767px) {
   .mbr {
+    display: block !important;
+  }
+  .mb_br {
     display: block !important;
   }
 }
@@ -1504,18 +1511,18 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
   vertical-align: top;
 }
 .footer_logo.logo_partner01 {
-  background-image: url("../images/logo_transport_en@2x.png");
-  width: 202px;
+  background-image: url("../images/logo_transport_ko@2x.png");
+  width: 134px;
   height: 50px;
 }
 .footer_logo.logo_partner02 {
-  background-image: url("../images/logo_suwon_en@2x.png");
+  background-image: url("../images/logo_suwon_ko@2x.png");
   width: 92px;
   height: 50px;
 }
 .footer_logo.logo_partner03 {
-  background-image: url("../images/logo_its_en@2x.png");
-  width: 157px;
+  background-image: url("../images/logo_its_ko@2x.png");
+  width: 230px;
   height: 50px;
 }
 
@@ -1681,15 +1688,15 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
     gap: 16px;
   }
   .footer_logo.logo_partner01 {
-    width: 138px;
+    width: 91px;
     height: 34px;
   }
   .footer_logo.logo_partner02 {
-    width: 63px;
+    width: 62px;
     height: 34px;
   }
   .footer_logo.logo_partner03 {
-    width: 107px;
+    width: 156px;
     height: 34px;
   }
   .page_control_layer {
@@ -6221,7 +6228,7 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
 
 .visual_signature {
   margin-top: 30px;
-  font-size: 58px;
+  font-size: 49px;
   font-weight: 700;
   line-height: 1.07;
   word-break: keep-all;
@@ -6448,7 +6455,8 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
     font-size: 20px;
   }
   .visual_signature {
-    font-size: 36px;
+    font-size: 32px;
+    line-height: 1.3;
   }
   .visual_sub {
     font-size: 16px;

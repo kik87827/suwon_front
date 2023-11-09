@@ -53,6 +53,7 @@ input:-webkit-autofill {
 .pcbr{display:block !important;}
 .tbr{display:none !important;}
 .mbr{display:none !important;}
+.mb_br{display:none !important;}
 .pc_img{display:inline-block !important;}
 .mb_img{display:none !important;}
 .mb_item{display:none !important;}
@@ -71,6 +72,7 @@ input:-webkit-autofill {
 }
 @media (max-width:$mobile){
     .mbr{display:block !important;}
+    .mb_br{display:block !important;}
 }
 
 
