@@ -6041,6 +6041,9 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
   .diagram_photo_sub {
     margin-top: 20px;
   }
+  .global_figure_copy {
+    font-size: 16px;
+  }
 }
 @media (max-width: 767px) {
   .global_contents_wrap {

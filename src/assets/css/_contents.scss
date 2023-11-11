@@ -1613,7 +1613,7 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {width: 10px;height:
     }
 }
 .overview_intro_box{
-    background:#eaeff5; padding:30px 20px 30px; box-sizing: border-box; height:100%; border-radius:4px;
+    background:#eaeff5; padding:30px 10px 30px; box-sizing: border-box; height:100%; border-radius:4px;
     
 }
 .overview_box_ico_row{}
@@ -2203,6 +2203,8 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {width: 10px;height:
 
     
     .diagram_photo_sub{margin-top:20px;}
+
+    .global_figure_copy{font-size:16px;}
 }
 
 @media (max-width:$mobile){
