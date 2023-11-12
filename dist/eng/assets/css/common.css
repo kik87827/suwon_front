@@ -2698,6 +2698,8 @@ li.nodata_li {
 .summary_canrd_spec_sub {
   margin-top: 10px;
   color: #292a2e;
+  width: 100%;
+  word-break: keep-all;
 }
 
 .summary_card_spec_sub_list {
@@ -4626,6 +4628,10 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
   vertical-align: top;
 }
 
+.diagram_step_item {
+  width: 100%;
+}
+
 .content_step_row .ico_step_dia {
   display: block;
   width: 60px;
@@ -6118,11 +6124,14 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
   .photo_item_list {
     flex-direction: column;
     margin: 0;
+    display: block;
   }
   .photo_item_list > li {
-    flex: 0 0 100%;
-    padding: 0;
+    padding: 0 0 30px;
     width: auto;
+  }
+  .photo_item_list > li:last-of-type {
+    padding-bottom: 0;
   }
   .diagram_system_box_content {
     flex-direction: column;

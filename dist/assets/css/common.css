@@ -2283,6 +2283,10 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
   display: block;
 }
 
+.mb_only_text {
+  display: none !important;
+}
+
 @media (max-width: 1299px) {
   .design_bullet_para {
     font-size: 16px;
@@ -2346,6 +2350,9 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
     position: relative;
     z-index: 1;
   }
+  .tab_box_list.break_type > li.mb_full {
+    flex: 1;
+  }
   .tab_box_list.break_type .tab_box_text {
     padding: 15px 8px;
   }
@@ -2354,6 +2361,9 @@ html:not(.touchmode) .mobile_nav_content_row::-webkit-scrollbar {
   }
   .tab_contents_wrap.type2 .tab_contents_inner {
     margin-top: 30px;
+  }
+  .mb_only_text {
+    display: inline-block !important;
   }
 }
 /* list */
@@ -2705,6 +2715,8 @@ li.nodata_li {
 .summary_canrd_spec_sub {
   margin-top: 10px;
   color: #292a2e;
+  width: 100%;
+  word-break: keep-all;
 }
 
 .summary_card_spec_sub_list {
@@ -4214,6 +4226,7 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
 
 .figure_spec_main {
   font-size: 24px;
+  margin-top: 8px;
   font-weight: 600;
   word-break: keep-all;
   text-align: center;
@@ -4221,7 +4234,6 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
 }
 
 .figure_spec_sub {
-  margin-top: 8px;
   font-size: 16px;
   font-weight: 300;
   word-break: keep-all;
@@ -4631,6 +4643,10 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
 }
 .diagram_summary_figure img {
   vertical-align: top;
+}
+
+.diagram_step_item {
+  width: 100%;
 }
 
 .content_step_row .ico_step_dia {
@@ -5372,6 +5388,40 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
   top: 8px;
   left: 0;
 }
+.data_list_table {
+  width: 100%;
+  border-top: 2px solid #133592;
+}
+.data_list_table thead tr th {
+  border-bottom: 1px solid #d3d5e0;
+  padding: 19px;
+  background: #f9f9fc;
+}
+.data_list_table tbody tr td {
+  border-bottom: 1px solid #f1f2f4;
+  padding: 19px;
+}
+.data_list_table tbody tr td.align_type2 {
+  text-align: left;
+}
+.data_list_table .short_cols {
+  width: 25%;
+}
+
+.data_list_thtext {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.data_list_tdtext {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #545760;
+}
+
 @media (max-width: 1299px) {
   .greet_contents_wrap {
     flex-direction: column-reverse;
@@ -6051,6 +6101,28 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
   .global_figure_copy {
     font-size: 16px;
   }
+  .data_list_table thead tr th {
+    padding: 17px;
+  }
+  .data_list_table tbody tr td {
+    padding: 17px;
+  }
+  .data_list_table .short_cols {
+    width: 1px;
+    white-space: nowrap;
+  }
+  .data_list_thtext {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .data_list_tdtext {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #545760;
+  }
 }
 @media (max-width: 767px) {
   .global_contents_wrap {
@@ -6125,11 +6197,14 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
   .photo_item_list {
     flex-direction: column;
     margin: 0;
+    display: block;
   }
   .photo_item_list > li {
-    flex: 0 0 100%;
-    padding: 0;
+    padding: 0 0 30px;
     width: auto;
+  }
+  .photo_item_list > li:last-of-type {
+    padding-bottom: 0;
   }
   .diagram_system_box_content {
     flex-direction: column;
@@ -6147,6 +6222,12 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {
   }
   .diagram_photo_sub {
     margin-top: 16px;
+  }
+  .data_list_table .mb_hidden {
+    display: none;
+  }
+  .data_list_tdtext .mb_only_text {
+    display: block !important;
   }
 }
 /* main */

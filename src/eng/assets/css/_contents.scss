@@ -337,7 +337,7 @@ li.nodata_li{
     text-align: left;
     color: #292a2e;}
     
-.summary_canrd_spec_sub{margin-top:10px;color:#292a2e;}
+.summary_canrd_spec_sub{margin-top:10px;color:#292a2e;width:100%;word-break: keep-all;}
 .summary_card_spec_sub_list{width:100%; margin-top:12px;
     > li{
         display:flex; gap:4px; margin-bottom:9px; 
@@ -1437,7 +1437,7 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {width: 10px;height:
 }
 
 .diagram_step_item{
-
+    width:100%;
 }
 .content_step_row{
     .ico_step_dia{
@@ -2256,8 +2256,11 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {width: 10px;height:
         > li {flex:0 0 100%;}
     }
 
-    .photo_item_list{flex-direction: column; margin:0;
-        > li{flex:0 0 100%;padding:0;width:auto;}
+    .photo_item_list{flex-direction: column; margin:0; display:block;
+        > li{
+            padding:0 0 30px;width:auto;
+            &:last-of-type{padding-bottom:0;}
+        }
     }
 
     .diagram_system_box_content{flex-direction: column; gap:14px;
