@@ -1250,8 +1250,8 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {width: 10px;height:
 .emp_word_copy{display:inline-block;}
 .emp_word_sub{font-size:22px;color:#545760;}
 .emp_word_main{
-    background-image: linear-gradient(157deg, #4dcefc 0%, #3181fe 35%, #0040ee 100%); line-height:1.3; margin-top:-10px; word-break: keep-all;
-    font-size: 68px;
+    background-image: linear-gradient(157deg, #4dcefc 0%, #3181fe 35%, #0040ee 100%); line-height:1.3; margin-top:0; word-break: keep-all;
+    font-size: 65px;
     font-weight: 800;
     text-align: center;
     -webkit-background-clip: text;
@@ -1267,7 +1267,7 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {width: 10px;height:
     padding-top:20px;
 }
 .photo_item_list{
-    display:flex; gap:40px; margin:0 -30px;
+    display:flex; gap:40px; 
     > li {
         &:last-of-type{}
     }

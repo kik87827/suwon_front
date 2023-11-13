@@ -1264,7 +1264,7 @@ html:not(.touchmode) .respon_scroll_wrap::-webkit-scrollbar {width: 10px;height:
     padding-top:20px;
 }
 .photo_item_list{
-    display:flex; gap:40px; margin:0 -30px;
+    display:flex; gap:40px;
     > li {
         &:last-of-type{}
     }
