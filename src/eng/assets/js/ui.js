@@ -141,26 +141,33 @@ $(function() {
         }
       }
 
-      /* if(window.scrollY == 0){
-        page_control_layer.classList.add("bottom_pos");
-      } */
+       if(window.scrollY == 0){
+        page_control_layer.classList.remove("scroll_ing");
+      } else{
+        page_control_layer.classList.add("scroll_ing");
+      }
       
       window.addEventListener("scroll", () => {
-        if(window.innerWidth > 1300){return;}
+        /* if(window.innerWidth > 1300){return;}
         if(document.querySelector("body").scrollHeight - window.innerHeight - barHeight <= window.scrollY){
           page_control_layer.classList.add("bottom_pos");
         }else{
           page_control_layer.classList.remove("bottom_pos");
+        } */
+        if(window.scrollY == 0){
+          page_control_layer.classList.remove("scroll_ing");
+        } else{
+          page_control_layer.classList.add("scroll_ing");
         }
       });
       
-      window.addEventListener("resize", () => {
+      /* window.addEventListener("resize", () => {
         if(window.innerWidth > 1300){
           page_control_layer.classList.remove("bottom_pos");
         }else{
           page_control_layer.classList.add("bottom_pos");
         }
-      });
+      }); */
 
       if(!!btn_page_control){
         btn_page_control.addEventListener("click",(e)=>{

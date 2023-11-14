@@ -265,11 +265,12 @@ html:not(.touchmode) {
 }
 
 
-.page_control_layer{position:fixed;bottom:20px;right:20px;display:flex;flex-direction: column;align-items: flex-end;z-index:50; transition:.4s opacity;
+.page_control_layer{position:fixed;bottom:20px;right:20px;display:flex;flex-direction: column;align-items: flex-end;z-index:50; transition:.4s opacity; opacity:0;
+    &.scroll_ing{opacity:1;}
     &.bottom_pos{opacity: 0;}
 }
 .page_control_item{}
-.btn_page_control{display:block;width:50px;height:50px;position:relative;border-radius:100%;background:#1d1c2b;
+.btn_page_control{display:block;width:50px;height:50px;position:relative;border-radius:100%;background:#1d1c2b; opacity:.88;
     &:after{display:block;content:'';width:7px;height:7px;border-right:1px solid #fff;border-bottom:1px solid #fff;position:absolute;top:50%;left:50%;transform: rotate(225deg);margin:-3.5px 0 0 -3.5px;}
 }
 
