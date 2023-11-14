@@ -141,9 +141,9 @@ function layoutFunc() {
       }
     }
 
-    if (window.scrollY == 0) {
+    /* if(window.scrollY == 0){
       page_control_layer.classList.add("bottom_pos");
-    }
+    } */
 
     window.addEventListener("scroll", () => {
       if (window.innerWidth > 1300) {
